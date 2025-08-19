@@ -3,14 +3,14 @@ from getpass import getpass
 
 
 try:
-  with connect(
+  mydb = mysql.connector.connect(
     host = "localhost",
     port= 3308,
     user = input("Enter your username: "),
     password = getpass("Enter your password: ")
-  ) as connection:
-    cursor = connection.cursor()
-    cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store;")
+  )
+  cursor = mydb.cursor()
+  cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store;")
 
-except Error as e:
+except mysql.connector.Error as e:
   print(e)
