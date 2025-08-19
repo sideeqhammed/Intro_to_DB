@@ -12,7 +12,7 @@ CREATE TABLE Books (
 
 CREATE TABLE Authors (
   author_id PRIMARY KEY,
-  autor_name VARCHAR(215)
+  author_name VARCHAR(215)
 );
 
 CREATE TABLE Customers (
